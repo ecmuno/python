@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+def pi(num_int):
+    div=1
+    numpi=0
+    par=True
+    while(num_int>0):
+        if(par):
+            numpi=numpi+(1.0/div)
+            par=False
+        else:
+            numpi=numpi-(1.0/div)
+            par=True
+        num_int=num_int-1
+        div+=2
+    numpi=numpi*4
+    return numpi
+
+a=pi(1000000)
+print(a)
